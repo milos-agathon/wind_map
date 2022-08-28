@@ -200,7 +200,7 @@ get_bounding_box <- function(bbox, bb) {
         crs = crsLONGLAT
     )
 
-    bb <- st_bbox(bbox)
+    bb <- sf::st_bbox(bbox)
 
     return(bb)
 }
@@ -248,8 +248,8 @@ make_wind_map <- function(eur_sf, bb) {
             data = eur_sf,
             fill = NA,
             color = "#07CFF7",
-            size = .15,
-            alpha = .75
+            size = .25,
+            alpha = .99
         ) +
         coord_sf(
             crs = crsLONGLAT,
